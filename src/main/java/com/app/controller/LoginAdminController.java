@@ -36,6 +36,9 @@ public class LoginAdminController {
 	@PostMapping("/logoutadmin/{key}")
 	public ResponseEntity<String> logoutUser(@PathVariable("key") String key) throws LoginException
 	{
+
+		System.out.println("100");
+
 		String mssg = lasi.logoutAdmin(key);
 		
 		return new ResponseEntity<String>(mssg,HttpStatus.OK);
